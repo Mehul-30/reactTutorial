@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-Project</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <div id="rooot"></div>
+
+    <div id="parent"></div>
+
+    <script>
+        const header = document.createElement("h4")
+
+        header.innerHTML = "Hello world!"
+
+        const root = document.getElementById("root")
+
+        root.appendChild(header)
+    </script>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        
+        const heading = React.createElement("h1", {}, "Hello world from React!");
+        const rooot = ReactDOM.createRoot(document.getElementById("rooot"));
+        rooot.render(heading);
+        
+    </script>
+
+    <script>
+        const parent = React.createElement("div",{id : "Parent"},
+        React.createElement("div",{id : "child"},
+            [React.createElement("h1",{},"This  is the text you see there!!"),
+            React.createElement("h2",{},"This is  may be from the second line")]
+        ))
+
+        const parentFetch = ReactDOM.createRoot(document.getElementById("parent"))
+
+        parentFetch.render(parent)
+     </script>
+</body>
+</html>
