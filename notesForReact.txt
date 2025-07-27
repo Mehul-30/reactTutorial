@@ -1,0 +1,51 @@
+In react jsx file is converted into react by babel then the react is converted into html
+    JSX is the combination od html and js
+
+    const jsxfile = <h1 id="jsxfile">This is a jsx file</h1>;
+
+        which is converted into react
+    
+    condt reactElement = React.createElement(
+        'h1',
+        { id: 'reactElement' },
+        'This is a react element'
+    );
+
+        Then converted into html 
+
+
+    const fetchRoot = ReactDOM.createRoot(document.getElementById('root')); 
+    fetchRoot.render(jsxfile);
+
+This is the workflow of React and all the converstion are done by parcel
+
+In the dependency there can be a tildo and caret
+    tildo means for the update of the major version of the dependency
+    caret can do only the minor upgrade
+
+React element
+    const itle = <h1 id="root"> "On the top" </h2>
+    To insert React element into Components use {} curly brackets eg.{title} into the Functional component code
+    
+
+React Component - Types
+    Class based Component
+    functional Component
+
+The variable name should be captial when nameing a React component for react element the namings doesn't matter
+
+To call a functional component it can be <Title /> or {Title ()} both are valid
+
+Component composition
+
+    One functional component into a funtional component
+        const Title = ()=>{
+            return <h1> "On the top" </h2>
+        }
+        const Header = ()=>{
+            < Title />
+            return <h1> "Hello here" </h1>
+        }
+
+To inject javascript into jsx use curly brackets {}
+    example {200+300}
