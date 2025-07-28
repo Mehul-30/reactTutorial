@@ -49,3 +49,17 @@ Component composition
 
 To inject javascript into jsx use curly brackets {}
     example {200+300}
+
+Function is like an object at the end and props is passin argument to the object
+    const Resturant = (props)=>{
+        //The contents
+        <h1>{props.resName}</h1>
+        <h1>{props.cusinie}</h1>
+    }
+
+    <Resturant resName ="Meghana Food" cusinie="Indian foods, fast food" />
+    This resName is pros which is passed as an argument
+
+Config driven UI 
+    The front-end will render based the data from the back-end
+    example carols showed in all the websites
