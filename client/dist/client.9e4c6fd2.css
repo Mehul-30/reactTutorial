@@ -1,4 +1,67 @@
-#root {
-  color: #00f;
+.root {
+  margin: 10px;
+}
+
+.Header {
+  border: 2px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  display: flex;
+}
+
+.body {
+  padding: 10px 0;
+}
+
+.logo {
+  height: 90px;
+  margin: 5px;
+}
+
+.nav-items {
+  padding: 0 20px;
+}
+
+.nav-items > ul {
+  font-size: 25px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.search {
+  padding: 20px 0 10px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  align-content: space-around;
+  display: flex;
+}
+
+.res-card {
+  background-color: #f0f0f0;
+  width: 200px;
+  margin: 10px;
+  padding: 5px;
+  transition: all .3s;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  box-shadow: 0 0 5px;
+}
+
+.res-logo {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 150px;
 }
 /*# sourceMappingURL=client.9e4c6fd2.css.map */
