@@ -63,3 +63,20 @@ Function is like an object at the end and props is passin argument to the object
 Config driven UI 
     The front-end will render based the data from the back-end
     example carols showed in all the websites
+
+There are two types of export / import
+    -Default export/import
+        At the end of the code mention export default <name>
+        In the begining import <variable name> from <its path>
+
+    -name export/import
+        export const <component name>
+        import {variableName} from <its path>
+
+React hooks
+  They are normal utility JS functions - developed by facebook 
+  Whenever a state vaiables updates it rerender the react components associated with it
+
+ How react works??
+  React uses reconcilialtion algorithm (React fiber )
+  
