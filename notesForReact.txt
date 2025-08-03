@@ -75,8 +75,19 @@ There are two types of export / import
 
 React hooks
   They are normal utility JS functions - developed by facebook 
-  Whenever a state vaiables updates it rerender the react components associated with it
+
+  useState has one array arugument is to used when need to reRender particular component
+    Whenever a state vaiables updates it rerender the react components associated with it
+  useEffect
+    It passes a callback function as an argument and a array
+    When the render cycle completes it will call the function in the useEffect
 
  How react works??
   React uses reconcilialtion algorithm (React fiber )
+
+  There are two types to render an webpage
+    1. ->load->api call->render
+    2. ->load->render->api call->rerender
+
+    React uses the second option and it is the better apporoach 
   
