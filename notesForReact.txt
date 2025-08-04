@@ -76,11 +76,27 @@ There are two types of export / import
 React hooks
   They are normal utility JS functions - developed by facebook 
 
-  useState has one array arugument is to used when need to reRender particular component
-    Whenever a state vaiables updates it rerender the react components associated with it
-  useEffect
-    It passes a callback function as an argument and a array
-    When the render cycle completes it will call the function in the useEffect
+  useState from react
+
+    useState has one array arugument is to used when need to reRender particular component
+        Whenever a state vaiables updates it rerender the react components associated with it
+        state variable are only create inside the components 
+
+    useEffect from react
+        It passes a callback function as an argument and a array
+        When the render cycle completes it will call the function in the useEffect
+        If there is no dependency array the useEffect function is called all the time when the page rendered
+            -If there is a dependency array the useEffect is called only in the intital time of rendering
+            -If there is any element in the dependency array the useEffect is rendered when the variable in the dependency array is updated
+
+    useRouteError from react-router-dom
+        This shows the error while routing that acan be use it to display
+        example:- const error = useRouteError()
+
+    useParams from react-router-dom
+        It is a hook used to get the params from the frontend
+        const params = useParams();
+
 
  How react works??
   React uses reconcilialtion algorithm (React fiber )
@@ -90,4 +106,28 @@ React hooks
     2. ->load->render->api call->rerender
 
     React uses the second option and it is the better apporoach 
+
+React-router-dom
+For routing to different pages react uses react-router-document
+    -It has createBrowserRouter is take a arraylist as an argument and ther we have to provide the path and element->which is the component 
+
+
+    example:-
+        import {createBrowserRouter, RouterProvider} from "react-router-dom"
+
+        const appLayout()
+        const root = ReactDOM.createRoot("root")
+
+        root.render(<appLayout/>)
+        this is the normal way
+
+        To have browser routing 
+            root.rennder(<RouterProvider router={appLayout} />)
+        
+        -Outlet
+            It is use to route the children present in the component
+
+There are two types of routing
+    -Client side routing -> example using a Link tag it load all the components at the begining and reRender the components. 
+    -Server side routing -> example using an anchor tag <a> reload the whole page and get the html or other docume from the backEnd. It refresh the browser
   

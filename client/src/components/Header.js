@@ -1,18 +1,21 @@
 import {URL_LOGO} from "../utils/constants";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+
   const [authButton, setAuthButton] = useState("Login");
+
   return (
     <div className="Header">
       <div className="logo-container">
         <img className="logo" src = {URL_LOGO} />
-      </div>
+      </div>   
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><Link to={"/"}>Home</Link></li>
+          <li><Link to={"/about"}>About</Link></li>
+          <li><Link to={"/contact"}>Contact</Link></li>
           <li>Cart</li>
           <li className="button" onClick={()=>{
             if(authButton === "Login"){
